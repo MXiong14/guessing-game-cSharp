@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 
 namespace GuessingGame
@@ -9,20 +8,20 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
-            int secretNumber = 42;
+            int sNumber = 42;
+            Console.WriteLine("Can you guess the secret number?");
+            Console.Write("Write your answer here: ");
+            string answer = Console.ReadLine();
 
-            Console.Write("Do you know what the secret number is? Guess: ");
-            string answer = Console.ReadLine().ToLower();
-
-            if (secretNumber == int.Parse(answer))
+            if (sNumber == int.Parse(answer))
             {
-                Console.WriteLine("You guessed it!!");
+                Console.WriteLine("You got it right! Nice!");
             }
             else
             {
-                Console.WriteLine("Incorrect! Try again.");
+                Console.WriteLine("You suck! Try again loser.");
             }
+
         }
     }
 }
-
